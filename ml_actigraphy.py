@@ -128,7 +128,6 @@ if __name__ == '__main__':
                                                   output_path=output_dir.joinpath(f'all_optimizations.png'))
 
 
-    # 2. Report the one with highest metric
     optimization = 'auc'
     model_type = 'xgboost'
     df_metrics_ci_best = df_metrics_ci.loc[(df_metrics_ci['optimization'] == optimization) &
@@ -138,7 +137,7 @@ if __name__ == '__main__':
     plot_roc_with_threshold_cms_grid_avg_subjects(df_predictions=df_predictions_best,
                                                   df_metrics_ci=df_metrics_ci_best,
                                                   class_names=  {0: "CL", 1: "iRBD"},
-                                                  model_type='xgboost',
+                                                  model_type=model_type,
                                                   title='Actigraphy Based-Model Subject Level',
                                                   scale=1.3,
                                                   suptitle_size=12,
@@ -147,7 +146,7 @@ if __name__ == '__main__':
                                                 # output_path = output_dir.joinpath(f'best_model_{optimization}_actigraphy.png')
                                                   )
 
-    ppv_table = compute_ppv_table(df_predictions, df_metrics_ci, model_type="xgboost", prevalence=0.015)
+    ppv_table = compute_ppv_table(df_predictions, df_metrics_ci, model_type=model_type, prevalence=0.015)
     print(ppv_table)
 
     round(ppv_table.ppv_adj.mean(), 1)
