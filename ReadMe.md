@@ -1,7 +1,3 @@
-Here’s a complete **README.md** draft for your project. It combines the scientific background you provided with the structure and scripts from the uploaded files.
-
----
-
 # A Two-Stage Questionnaire and Actigraphy Screening for Isolated REM Sleep Behavior Disorder in a Multicenter Cohort 
 
 ## Overview
@@ -95,23 +91,23 @@ python two_stage_predictions.py
 
 The performance of the questionnaire alone was assessed in 95 iRBD and 194 controls. Dream enactment had an AUC of 0.85, sensitivity 77.9%, and specificity 92.3%. Hyposmia had an AUC of 0.69, sensitivity 56.8%, and specificity 80.9%. Constipation had an AUC of 0.62, sensitivity 55.8%, and specificity 67.0%. Orthostatic hypotension had an AUC of 0.52, sensitivity 31.6%, and specificity 75.3% 
 <div style="text-align: center;">
-  <img src="static/Figure 2.png" width="60%">
+  <img src="static/Figure 2.png" width="80%">
 </div>
 
 Based on within-subject probabilities averaged across nights, XGBoost model achieved an AUC of 0.88 (95% CI: 0.84–0.92) and an area under the precision–recall curve of 0.85 (95% CI: 0.78–0.91). At τ= 0.5, the model achieved sensitivity 80.8% and specificity 84.8%; at  τ_Sp = 0.62 sensitivity 61.5% and specificity 96.2%; and at τ^* = 0.49, sensitivity 82.1% and specificity 83.5%. 
 <div style="text-align: center;">
-  <img src="static/Figure 3.png" width="60%">
+  <img src="static/Figure 3.png" width="80%">
 </div>
 
 Applied consecutively, the two-stage screening starting with the dream enactment question followed by actigraphy achieved a final sensitivity of 67.6% and specificity of 100%, while using instead the 4-item questionnaire (Figure 4A), final sensitivity and specificity were 68.9% and 100% with default thresholds, and 73.3% and 100%, with optimized thresholds, respectively 
 <div style="text-align: center;">
-  <img src="static/Figure 4a.png" width="60%">
-  <img src="static/Figure 4b.png" width="60%">
+  <img src="static/Figure 4a.png" width="80%">
+  <img src="static/Figure 4b.png" width="80%">
 </div>
 
 In the lasso regression model, the largest positive coefficients were observed for “dream enactment yes” (β = 0.84) and “smell yes” (β = 0.77). Among interaction terms, the highest coefficients were for interaction between “smell do not know” and “orthostasis yes” (β = 0.65), followed by the interaction between “orthostasis do not know” and “smell yes” (β = 0.58), and the interaction between “orthostasis do not know” and “constipation yes” (β = 0.52). A negative coefficient was identified for the interaction between “dream enactment yes” and “orthostasis do not know” (β = –0.41) 
 <div style="text-align: center;">
-  <img src="static/Figure S1.png" width="60%">
+  <img src="static/Figure S1.png" width="80%">
 </div>
 
 ---
